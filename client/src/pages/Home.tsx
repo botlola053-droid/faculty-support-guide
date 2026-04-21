@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BookOpen, Users, Lightbulb, CheckCircle2, ArrowRight } from "lucide-react";
-import { Link } from "wouter";
 
 /**
  * Design Philosophy: Modern Academic
@@ -98,12 +97,10 @@ export default function Home() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 اضطرابات عصبية تؤثر على قدرة الفرد على اكتساب ومعالجة المعلومات، خاصة في القراءة والكتابة والحساب
               </p>
-              <Link href="/learning-disabilities">
-                <a className="text-blue-700 font-semibold hover:text-blue-800 flex items-center gap-2">
-                  اقرأ المزيد
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </Link>
+              <a href="/learning-disabilities" className="text-blue-700 font-semibold hover:text-blue-800 flex items-center gap-2">
+                اقرأ المزيد
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </Card>
 
             {/* ADHD Card */}
@@ -119,12 +116,10 @@ export default function Home() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 اضطراب نمائي عصبي يتميز بنمط مستمر من عدم الانتباه وفرط النشاط والاندفاعية
               </p>
-              <Link href="/adhd-support">
-                <a className="text-blue-700 font-semibold hover:text-blue-800 flex items-center gap-2">
-                  اقرأ المزيد
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </Link>
+              <a href="/adhd-support" className="text-blue-700 font-semibold hover:text-blue-800 flex items-center gap-2">
+                اقرأ المزيد
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </Card>
 
             {/* Challenges Card */}
@@ -140,12 +135,10 @@ export default function Home() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 التحديات الأكاديمية والاجتماعية والنفسية التي يواجهها الطلبة في البيئة الجامعية
               </p>
-              <Link href="/challenges">
-                <a className="text-blue-700 font-semibold hover:text-blue-800 flex items-center gap-2">
-                  اقرأ المزيد
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </Link>
+              <a href="/challenges" className="text-blue-700 font-semibold hover:text-blue-800 flex items-center gap-2">
+                اقرأ المزيد
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </Card>
           </div>
         </div>
