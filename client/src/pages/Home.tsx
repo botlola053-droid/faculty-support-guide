@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { BookOpen, Users, Lightbulb, CheckCircle2, ArrowRight } from "lucide-react";
+import { BookOpen, Users, Lightbulb, CheckCircle2, ArrowRight, Download } from "lucide-react";
+import { downloadGuidePDF } from "@/lib/generatePDF";
+import { useState } from "react";
 
 /**
  * Design Philosophy: Modern Academic
@@ -11,6 +13,19 @@ import { BookOpen, Users, Lightbulb, CheckCircle2, ArrowRight } from "lucide-rea
  */
 
 export default function Home() {
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDownloadPDF = async () => {
+    try {
+      setIsDownloading(true);
+      await downloadGuidePDF();
+    } catch (error) {
+      console.error('Error downloading PDF:', error);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Header */}
@@ -35,6 +50,14 @@ export default function Home() {
             <a href="#resources" className="text-gray-700 hover:text-blue-700 transition-colors">
               الموارد
             </a>
+            <Button
+              onClick={handleDownloadPDF}
+              disabled={isDownloading}
+              className="bg-blue-700 hover:bg-blue-800 text-white flex items-center gap-2"
+            >
+              <Download className="w-4 h-4" />
+              {isDownloading ? 'جاري التحميل...' : 'تحميل PDF'}
+            </Button>
           </nav>
         </div>
       </header>
