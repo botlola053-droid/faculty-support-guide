@@ -117,8 +117,20 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    direction: rtl;
+    font-family: 'Almarai', sans-serif;
+  }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Almarai', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Almarai', sans-serif;
+    font-weight: 700;
+  }
+  p, span, div {
+    font-family: 'Almarai', sans-serif;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
